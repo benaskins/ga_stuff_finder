@@ -10,3 +10,9 @@
 ["Personals", "For Sale", "Garage Sales", "Entertainment"].each do |category|
   Category.create(:name => category) unless Category.exists?(:name => category)
 end
+
+
+20.times do
+  Classified.create(:title => Faker::Lorem.sentence, :description => Faker::Lorem.paragraphs.join("\n"), :price => rand(1000), :category => Category.all.sample)
+end
+
