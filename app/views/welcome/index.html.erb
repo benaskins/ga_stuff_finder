@@ -1,0 +1,13 @@
+<h1>Welcome to stuff finder</h1>
+
+<h2>Our latest stuff</h2>
+
+<ul>
+  <% @classifieds.each do |classified| %>
+    <li>
+      <%= link_to classified.title, classified_path(classified) %>
+      Category: <%= link_to classified.category.to_s, category_path(classified.category) %>
+      Price: <%= number_to_currency(classified.price) %>
+    </li>
+  <% end %>
+</ul>
