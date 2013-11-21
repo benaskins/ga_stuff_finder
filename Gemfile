@@ -12,6 +12,7 @@ gem 'simple_form'
 gem 'uglifier', '>= 1.3.0'
 
 group :development do
+  gem 'debugger'
   gem 'sqlite3'
 end
 
