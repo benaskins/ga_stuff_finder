@@ -1,0 +1,5 @@
+<h1><%= @classified.title %></h1>
+<span class="category"><%= link_to @classified.category.name, category_path(@classified.category) %></span>
+<p><%= @classified.description.gsub("\n", "<br/>").html_safe %></p>
+
+<span class="price">Buy now for <%= number_to_currency @classified.price %>
