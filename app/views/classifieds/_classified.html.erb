@@ -1,0 +1,5 @@
+<li>
+  <%= link_to classified.title, classified_path(classified) %>
+  <%= link_to classified.category.to_s, category_path(classified.category), :class => 'btn btn-primary btn-xs'  %>
+  Price: <%= number_to_currency(classified.price) %>
+</li>
